@@ -1,0 +1,49 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "Hoodie Never Stop Learning",
+      "slug": "moletom-never-stop-learning",
+      "price": 129,
+      "image": "/moletom-never-stop-learning.png",
+      "description": "Hoodie made of 88% cotton and 12% polyester.",
+      "featured": true
+    },
+    {
+      "id": 2,
+      "title": "Hoodie AI Side",
+      "slug": "moletom-ai-side",
+      "price": 99,
+      "image": "/moletom-ai-side.png",
+      "description": "Hoodie made of 88% cotton and 12% polyester.",
+      "featured": true
+    },
+    {
+      "id": 3,
+      "title": "T-Shrit DoWhile 2022",
+      "slug": "camiseta-dowhile-2022",
+      "price": 69,
+      "image": "/camiseta-dowhile-2022.png",
+      "description": "T-shirt made of 100% cotton.",
+      "featured": true
+    },
+    {
+      "id": 4,
+      "title": "Hoodie Java 2023",
+      "slug": "moletom-java-2023",
+      "price": 99,
+      "image": "/moletom-java.png",
+      "description": "Hoodie made of 88% cotton and 12% polyester.",
+      "featured": false
+    },
+    {
+      "id": 5,
+      "title": "Hoodie AI for Devs",
+      "slug": "moletom-ia-p-devs",
+      "price": 99,
+      "image": "/moletom-ia-p-devs.png",
+      "description": "Hoodie made of 88% cotton and 12% polyester.",
+      "featured": false
+    }
+  ]
+}
