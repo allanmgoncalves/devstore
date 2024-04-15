@@ -15,7 +15,7 @@ export default async function Home() {
   const [highLightedProduct, ...othersProducts] = await GetFeaturedProducts()
 
   return (
-    <div className="grid lg:max-h-[calc(100vh-132px)] grid-cols-9 grid-row-6 gap-6">
+    <div className="grid max-h-[calc(100dvh-132px)] grid-cols-9 grid-row-6 gap-6">
       <Link
         href={`/products/${highLightedProduct.slug}`}
         className="group relative col-span-6 row-span-6 rounded-lg bg-zinc-900 overflow-hidden flex justify-center items-center"
