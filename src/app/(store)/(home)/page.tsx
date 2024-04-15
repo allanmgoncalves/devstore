@@ -1,9 +1,18 @@
 import { api } from '@/data/api'
 import { Product } from '@/data/types/product'
+import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 
-async function GetFeaturedProducts(): Promise<Product[]> {
+export const metadata: Metadata = {
+  title: {
+    template: '%s | DevStore',
+    default: 'Home',
+  },
+  description: 'Study Project about NextJS • Client and Server Components',
+}
+
+async function getFeaturedProducts(): Promise<Product[]> {
   const response = await api('/products/featured', {
     next: {
       revalidate: 60 * 60,
@@ -16,12 +25,12 @@ async function GetFeaturedProducts(): Promise<Product[]> {
 }
 
 export default async function Home() {
-  const [highLightedProduct, ...othersProducts] = await GetFeaturedProducts()
+  const [highLightedProduct, ...othersProducts] = await getFeaturedProducts()
 
   return (
     <div className="grid max-h-[calc(100dvh-132px)] grid-cols-9 grid-row-6 gap-6">
       <Link
-        href={`/products/${highLightedProduct.slug}`}
+        href={`/product/${highLightedProduct.slug}`}
         className="group relative col-span-6 row-span-6 rounded-lg bg-zinc-900 overflow-hidden flex justify-center items-center"
       >
         <Image
@@ -48,7 +57,7 @@ export default async function Home() {
         return (
           <Link
             key={product.id}
-            href={`/products/${product.id}`}
+            href={`/product/${product.slug}`}
             className="group relative col-span-3 row-span-3 rounded-lg bg-zinc-900 overflow-hidden flex justify-center items-center"
           >
             <Image
